@@ -1,21 +1,20 @@
 import React from 'react';
-import useFirebase from '../../hooks/useFirebase';
 
-const Login = () => {
-    const {signInWithGoogle}=useFirebase()
+const SignUp = () => {
     return (
         <div>
-            <h2>Please login</h2>
-            <button onClick={signInWithGoogle}>Google Sign In</button>
+             <h2>Please Register Now</h2>
             <form action="">
+                <input type="text" name="" placeholder='Your name' />
+                <br></br>
                 <input type="email"  placeholder='Your email'/>
                 <br></br>
                 <input type="password" placeholder='Password' />
                 <br></br>
-                <input  type="submit" value="Login" />
+                <input type="submit" value="Register" />
             </form>
         </div>
     );
 };
 
-export default Login;
+export default SignUp;
