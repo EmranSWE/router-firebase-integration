@@ -33,8 +33,14 @@ const useFirebase = () => {
       console.log(errorMessage)
     });
 
+    
 
    }
+   useEffect( ()=>{
+    onAuthStateChanged(auth,user =>{
+      setUser(user)
+    })
+  },[])
    return {
     user,
     handleSignOut,
